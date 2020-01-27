@@ -1,0 +1,26 @@
+/*
+Theme Name: MyTheme
+Theme URI: https://victorbarlier.fr
+Author: Geek
+Author URI: https://victorbarlier.fr
+Description: Mon premier thème !
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+
+h1{
+  font-size: 54px;
+  color: white;
+}
+
+.header{
+  text-align: center;
+  background-color: purple;
+  border: 1px solid purple;
+}
+
+.header img{
+  width: 150px;
+  height: 80px;
+}
