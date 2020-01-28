@@ -1,11 +1,24 @@
+// First header
+
+header {
+    background-image: url('assets/img/plant3.svg');
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $first_color;
+    border: 1px solid $first_color;
+
 nav {
     display: flex!important;
     font-family: $first_font;
     text-transform: uppercase;
-    background-color: $first_color;
-    border: 1px solid $first_color;
+
     align-items: center;
     justify-content: space-between;
+
+    h1 {
+        color: $third_color;
+    }
 
     img {
         width: 300px;
@@ -19,6 +32,11 @@ nav {
 
         .menu-item-14, .menu-item-23, .menu-item-25 {
             margin-left: 50px;
+        }
+
+        .current-menu-item a {
+            color: $second_color;
+            text-decoration: none;
         }
 
         a {
@@ -36,3 +54,10 @@ nav {
 
 }
 
+}
+
+// Second header (login)
+
+.menu-main-container {
+    margin: 0 auto;
+}
