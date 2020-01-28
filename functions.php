@@ -118,7 +118,28 @@ add_action( 'widgets_init', 'mytheme_sidebar_widgets' );
 
 
 
+function custom_regist(){
+  $html = '<form id="c_register_form" class="c_register_form" action="" method="post">
+    <div class="row_form">
+      <label for="register_name">Identifiant :</label>
+      <input type="text" id="register_name" name="login" value="">
+    </div>
+    <div class="row_form">
+      <label for="register_password">Mot de Passe :</label>
+      <input type="text" id="register_password" name="pswd" value="">
+    </div>
+    <div class="row_form">
+      <label for="register_mail">E-mail :</label>
+      <input type="email" id="register_mail" name="mailOf" value="">
+    </div>
+    <div class="row_form">
+      <input type="submit" id="register_sub" name="sub" value="Inscription">
+    </div>
+  </form>';
+  return $html;
+}
 
+add_shortcode( 'register_form', 'custom_regist' );
 
 
  ?>
