@@ -117,19 +117,6 @@ function mytheme_sidebar_widgets() {
 add_action( 'widgets_init', 'mytheme_sidebar_widgets' );
 
 
-// Ajout bouton login/logout
-
-add_filter('wp_nav_menu', 'add_login_logout_link', 10, 2);
-function add_login_logout_link($items, $args) {
-        ob_start();
-        wp_loginout('index.php');
-        $loginoutlink = ob_get_contents();
-        ob_end_clean();
-        $items .= '<div class="btn-logout">'. $loginoutlink .'</div>';
-    return $items;
-}
-
-
 function custom_regist(){
   $html = '<form id="c_register_form" class="c_register_form" action="" method="post">
     <div class="row_form">
