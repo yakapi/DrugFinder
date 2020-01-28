@@ -27,7 +27,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 nav { display: flex !important; font-family: "Montserrat", sans-serif; text-transform: uppercase; background-color: #004EB1; border: 1px solid #004EB1; align-items: center; justify-content: space-between; }
 nav img { width: 300px; height: 100px; margin: 15px 0; }
 nav ul { display: flex; margin-bottom: 0; }
-nav ul .menu-item-14, nav ul .menu-item-23 { margin-left: 50px; }
+nav ul .menu-item-14, nav ul .menu-item-23, nav ul .menu-item-25 { margin-left: 50px; }
 nav ul a { color: #E0E0E0; font-weight: 600; font-size: 1.2rem; transition: all .3s; }
 nav ul a:hover { color: #FEC007; text-decoration: none; }
 

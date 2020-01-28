@@ -21,10 +21,23 @@
         'menu' => 'Main',
       )); ?>
 
-      <?php wp_nav_menu(array(
-        'menu' => 'Login',
-      )); ?>
+<?php $user_log = is_user_logged_in(); 
 
+ if ($user_log === true) {
+    wp_nav_menu(array(
+        'menu' => 'Logout',
+      )); 
+ } else {
+     wp_nav_menu(array(
+        'menu' => 'Login',
+      )); 
+ }
+?>
+
+
+
+ 
+  
 
 
     </nav>

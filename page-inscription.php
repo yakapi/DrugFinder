@@ -17,24 +17,47 @@
     //   'nicename',
     //   ]
     // )));
+
+
+
+    
+    $array_user = [];
+    $user_mail = $_POST['mailOf'];
     $test = get_users();
 
     foreach ($test as $value) {
-      
-      echo $value->display_name."<br>";
+      array_push($array_user, $value->user_email);
+
     }
-    // echo $_POST['login'];
-    // if (isset($_POST['sub'])) {
-    //   if (isset($_POST['login']) && isset($_POST['mailOf']) && isset($_POST['pswd'])) {
-    //
-    //     $userdata = array(
-    //       'user_pass' => $_POST['pswd'],
-    //       'user_login' => $_POST['login'],
-    //       'user_email' => $_POST['mailOf'],
-    //     );
-    //     wp_insert_user($userdata);
-    //   }
-    // }
+
+$boolean =  true;
+
+for ($i=0; $i < sizeof($array_user); $i++) { 
+   if($user_mail == $array_user[$i]) {
+     $boolean = false;
+   }
+}
+
+if ($boolean == true) {
+
+    echo $_POST['login'];
+    if (isset($_POST['sub'])) {
+      if (isset($_POST['login']) && isset($_POST['mailOf']) && isset($_POST['pswd'])) {
+    
+        $userdata = array(
+          'user_pass' => $_POST['pswd'],
+          'user_login' => $_POST['login'],
+          'user_email' => $_POST['mailOf'],
+        );
+        wp_insert_user($userdata);
+      }
+    }
+}
+
+else {
+  echo 'Adresse déjà existante';
+}
+
     the_content();
     get_footer();
     wp_footer();
