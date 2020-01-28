@@ -9,24 +9,8 @@ Requires at least: WordPress 5.0
 Version: 1.0
 */
 
-@import 'general/reset';
-@import 'general/variables';
-@import 'general/fonts';
-
-
-h1{
-    font-size: 54px;
-    color: white;
-  }
-  
-.header{
-    text-align: center;
-    background-color: purple;
-    border: 1px solid purple;
-  }
-  
-.header img{
-    width: 150px;
-    height: 80px;
-  }
-  
+@import 'general/variables.scss';
+@import 'general/reset.scss';
+@import 'general/fonts.scss';
+@import 'pages/header.scss';
+@import 'pages/page-home.scss';

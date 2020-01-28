@@ -1,0 +1,32 @@
+nav {
+    display: flex!important;
+    font-family: $first_font;
+    text-transform: uppercase;
+    background-color: $first_color;
+    border: 1px solid $first_color;
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        width: 300px;
+        height: 100px;
+        margin: 15px 0;
+    }
+
+    ul {
+        display: flex;
+        margin-bottom: 0;
+
+        a {
+            color: $third_color;
+            font-weight: $semi-bold;
+            font-size: 1.2rem;
+            &:hover {
+                color: $second_color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    }
+
