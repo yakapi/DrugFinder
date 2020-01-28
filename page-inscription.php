@@ -12,17 +12,29 @@
     get_header();
     wp_body_open();
     //custom_regist();
-    echo $_POST['login'];
-    if (isset($_POST['sub'])) {
-      if (isset($_POST['login']) && isset($_POST['mailOf']) && isset($_POST['pswd'])) {
-        $userdata = array(
-          'user_pass' => $_POST['pswd'],
-          'user_login' => $_POST['login'],
-          'user_email' => $_POST['mailOf'],
-        );
-        wp_insert_user($userdata);
-      }
+    // var_dump(get_users(array('fields' =>
+    // [
+    //   'nicename',
+    //   ]
+    // )));
+    $test = get_users();
+
+    foreach ($test as $value) {
+      
+      echo $value->display_name."<br>";
     }
+    // echo $_POST['login'];
+    // if (isset($_POST['sub'])) {
+    //   if (isset($_POST['login']) && isset($_POST['mailOf']) && isset($_POST['pswd'])) {
+    //
+    //     $userdata = array(
+    //       'user_pass' => $_POST['pswd'],
+    //       'user_login' => $_POST['login'],
+    //       'user_email' => $_POST['mailOf'],
+    //     );
+    //     wp_insert_user($userdata);
+    //   }
+    // }
     the_content();
     get_footer();
     wp_footer();
