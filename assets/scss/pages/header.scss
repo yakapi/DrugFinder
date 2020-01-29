@@ -2,22 +2,23 @@
 
 header {
     background-image: url('assets/img/plant3.svg');
-    background-size: 700px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: $first_color;
     border: 1px solid $first_color;
-
+    height: 175px;
+    box-shadow: inset 10px -10px -5px 5px rgb(13, 17, 11);
 nav {
     display: flex!important;
-    font-family: $first_font;
-    text-transform: uppercase;
-
+    font-family: $third_font;
     align-items: center;
     justify-content: space-between;
 
     h1 {
-        color: $third_color;
+        color: $seven_color;
+        font-family: $seven_font;
+        font-size: 56px;
+        text-shadow: 3px 0px 1px #155255;
     }
 
     img {
@@ -30,25 +31,32 @@ nav {
         display: flex;
         margin-bottom: 0;
 
+
+
         .menu-item-14, .menu-item-23, .menu-item-25 {
             margin-left: 50px;
         }
 
         .current-menu-item a {
-            color: $second_color;
+            color: $sixth_color;
             text-decoration: none;
         }
 
+        li {
+            padding-bottom: 15px;
+       
+
         a {
             color: $third_color;
-            font-weight: $semi-bold;
             font-size: 1.2rem;
-            transition: all .3s;
+            text-transform: uppercase;
 
             &:hover {
-                color: $second_color;
+                color: $third_color;
                 text-decoration: none;
+                border-bottom: 2px solid $sixth_color;
             }
+        }
         }
     }
 

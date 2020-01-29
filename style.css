@@ -8,7 +8,11 @@ Description: Mon premier thème !
 Requires at least: WordPress 5.0
 Version: 1.0
 */
-@import url('href="https://fonts.googleapis.com/css?family=Caveat:400,700|Montserrat:400,500,600,700,800&display=swap"');
+@import url("https://fonts.googleapis.com/css?family=Caveat:400,700|Montserrat:400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Mukta+Vaani&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Hind+Vadodara&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -24,16 +28,21 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-header { background-image: url("assets/img/plant3.svg"); background-size: 700px; background-repeat: no-repeat; background-position: center; background-color: #648B57; border: 1px solid #648B57; }
-header nav { display: flex !important; font-family: "Montserrat", sans-serif; text-transform: uppercase; align-items: center; justify-content: space-between; }
-header nav h1 { color: #fff; }
+@font-face { font-family: 'Harlowsi'; src: url("assets/fonts/HARLOWSI.TTF") format("ttf"), url("assets/fonts/HARLOWSI.woff") format("woff"); }
+header { background-image: url("assets/img/plant3.svg"); background-repeat: no-repeat; background-position: center; background-color: #182714; border: 1px solid #182714; height: 175px; box-shadow: inset 10px -10px -5px 5px #0d110b; }
+header nav { display: flex !important; font-family: "Assistant", sans-serif; align-items: center; justify-content: space-between; }
+header nav h1 { color: #FFFB92; font-family: "Harlowsi", sans-serif; font-size: 56px; text-shadow: 3px 0px 1px #155255; }
 header nav img { width: 300px; height: 100px; margin: 15px 0; }
 header nav ul { display: flex; margin-bottom: 0; }
 header nav ul .menu-item-14, header nav ul .menu-item-23, header nav ul .menu-item-25 { margin-left: 50px; }
-header nav ul .current-menu-item a { color: #DB9801; text-decoration: none; }
-header nav ul a { color: #fff; font-weight: 600; font-size: 1.2rem; transition: all .3s; }
-header nav ul a:hover { color: #DB9801; text-decoration: none; }
+header nav ul .current-menu-item a { color: #46604C; text-decoration: none; }
+header nav ul li { padding-bottom: 15px; }
+header nav ul li a { color: #fff; font-size: 1.2rem; text-transform: uppercase; }
+header nav ul li a:hover { color: #fff; text-decoration: none; border-bottom: 2px solid #46604C; }
 
 .menu-main-container { margin: 0 auto; }
+
+#main-section { background-color: #46604C; height: 200vh; width: 100%; position: relative; background-image: url("assets/img/bg_drugs.jpg"); background-size: contain; background-blend-mode: overlay; box-shadow: inset 0px 0px 10px 5px #182714; }
+#main-section .background { background-color: #fff; float: right; margin-top: 10%; width: 80%; height: 70%; }
 
 /*# sourceMappingURL=style.css.map */

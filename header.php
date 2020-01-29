@@ -17,7 +17,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Logo-DF.svg" alt="Logo">
       </a> 
       
-      <h1>Drugs Finder</h1>
+      <h1>Natural Drugs Finder</h1>
 
 
 <?php $user_log = is_user_logged_in(); 

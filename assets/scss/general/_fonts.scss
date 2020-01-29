@@ -1,9 +1,23 @@
 // Import google fonts
-@import url('href="https://fonts.googleapis.com/css?family=Caveat:400,700|Montserrat:400,500,600,700,800&display=swap"');
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Montserrat:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Assistant&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mukta+Vaani&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara&display=swap');
+
+@font-face {
+    font-family: 'Harlowsi';
+    src: url('assets/fonts/HARLOWSI.TTF') format('ttf'), url('assets/fonts/HARLOWSI.woff') format('woff');
+}
 
 // Name
 $first_font: "Montserrat", sans-serif;
 $second_font: "Caveat", sans-serif;
+$third_font: "Assistant", sans-serif;
+$fourth_font: 'Hind Vadodara', sans-serif;
+$five_font: 'Mukta Vaani', sans-serif;
+$six_font: 'Merriweather', sans-serif;
+$seven_font: 'Harlowsi', sans-serif;
 
 // Weight
 $normal: 400;
