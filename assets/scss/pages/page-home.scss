@@ -1,19 +1,23 @@
 #main-section {
-    background-color: $sixth_color;
     height: 200vh;
     width: 100%;
-    position: relative;
-    background-image: url('assets/img/bg_drugs.jpg');
-    background-size: contain;
-    background-blend-mode: overlay;
-    box-shadow: inset 0px 0px 10px 5px #182714;
+
+    // box-shadow: inset 0px 0px 10px 5px #182714;
 
     .background {
         background-color: #fff;
         float: right;
-        margin-top: 10%;
+        margin-top: 8%;
         width: 80%;
-        height: 70%;
+        height: 30%;
 
+    }
+
+    .image-home img {
+        width: 700px;
+        margin-top: 50px;
+        filter: blur(1.5px);
+        box-shadow: 1px 1px 1px 1px #333;
+        opacity: 0.9;
     }
 }

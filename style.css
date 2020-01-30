@@ -29,7 +29,7 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 table { border-collapse: collapse; border-spacing: 0; }
 
 @font-face { font-family: 'Harlowsi'; src: url("assets/fonts/HARLOWSI.TTF") format("ttf"), url("assets/fonts/HARLOWSI.woff") format("woff"); }
-header { background-image: url("assets/img/plant3.svg"); background-repeat: no-repeat; background-position: center; background-color: #182714; border: 1px solid #182714; height: 175px; box-shadow: inset 10px -10px -5px 5px #0d110b; }
+header { height: 175px; }
 header nav { display: flex !important; font-family: "Assistant", sans-serif; align-items: center; justify-content: space-between; }
 header nav h1 { color: #FFFB92; font-family: "Harlowsi", sans-serif; font-size: 56px; text-shadow: 3px 0px 1px #155255; }
 header nav img { width: 300px; height: 100px; margin: 15px 0; }
@@ -42,7 +42,10 @@ header nav ul li a:hover { color: #fff; text-decoration: none; border-bottom: 2p
 
 .menu-main-container { margin: 0 auto; }
 
-#main-section { background-color: #46604C; height: 200vh; width: 100%; position: relative; background-image: url("assets/img/bg_drugs.jpg"); background-size: contain; background-blend-mode: overlay; box-shadow: inset 0px 0px 10px 5px #182714; }
-#main-section .background { background-color: #fff; float: right; margin-top: 10%; width: 80%; height: 70%; }
+#main-section { height: 200vh; width: 100%; }
+#main-section .background { background-color: #fff; float: right; margin-top: 8%; width: 80%; height: 30%; }
+#main-section .image-home img { width: 700px; margin-top: 50px; filter: blur(1.5px); box-shadow: 1px 1px 1px 1px #333; opacity: 0.9; }
+
+.screen-content { background-color: #46604C; background-image: url("assets/img/bg_drugs.jpg"); background-size: cover; background-blend-mode: overlay; background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
