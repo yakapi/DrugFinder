@@ -2,18 +2,27 @@
 get_header();
 ?>
 
-<form action="" method="post" id="form_medicine">
-    <select name="medicinal" id="medicinal">
-    </select>
+<div class="form-choice">
+    <div class="MedicU">
+        <div id="MedicUse">Medical Use</div>
+        <form action="">
+            <select name="" id="select-medic-use">
 
+            </select>
+        </form>
+    </div>
+    <div class="MedicNU">
+        <div id="NoMedicUse">Medical No Use</div>
+        <form action="">
+            <select name="" id="select-no-medic-use">
+                
+            </select>
+        </form>
 
-</form>
-<form action="" method="post" id="form_no_medicine">
-    <select name="no_medicinal" id="no_medicinal">
-    </select>
+    </div>
+</div>
 
-
-</form>
+<div id="objectif"></div>
 
 
 
