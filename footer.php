@@ -1,8 +1,12 @@
-<?php echo 'hello'; ?>
-<p>It's me Regan !</p>
+    <footer>
+      <?php echo 'hello'; ?>
+      <p>It's me Regan !</p>
 
-<?php
-wp_footer(); ?>
+    </footer>
+  </div>
+    <!-- Appel Script -->
+    <?php
+    wp_footer(); ?>
 
 </body>
 

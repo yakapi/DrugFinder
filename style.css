@@ -29,23 +29,23 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 table { border-collapse: collapse; border-spacing: 0; }
 
 @font-face { font-family: 'Harlowsi'; src: url("assets/fonts/HARLOWSI.TTF") format("ttf"), url("assets/fonts/HARLOWSI.woff") format("woff"); }
-header { height: 175px; }
+header { height: 150px; background-image: url("assets/img/plant3.svg"); background-repeat: no-repeat; background-position: bottom center; }
 header nav { display: flex !important; font-family: "Assistant", sans-serif; align-items: center; justify-content: space-between; }
-header nav h1 { color: #FFFB92; font-family: "Harlowsi", sans-serif; font-size: 56px; text-shadow: 3px 0px 1px #155255; }
-header nav img { width: 300px; height: 100px; margin: 15px 0; }
-header nav ul { display: flex; margin-bottom: 0; }
-header nav ul .menu-item-14, header nav ul .menu-item-23, header nav ul .menu-item-25 { margin-left: 50px; }
-header nav ul .current-menu-item a { color: #46604C; text-decoration: none; }
-header nav ul li { padding-bottom: 15px; }
-header nav ul li a { color: #fff; font-size: 1.2rem; text-transform: uppercase; }
-header nav ul li a:hover { color: #fff; text-decoration: none; border-bottom: 2px solid #46604C; }
-
-.menu-main-container { margin: 0 auto; }
+header nav .encard-logo { margin: 10px; width: 100px; height: 100px; }
+header nav .encard-logo img { width: 100%; height: 100%; }
+header nav #logo-block { display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; }
+header nav #logo-blockhover { text-decoration: none; }
+header nav #logo-block h1 { color: #FFFB92; font-family: "Caveat", sans-serif; font-size: 56px; text-shadow: 3px 0px 1px black; }
+header nav .connect-board ul { display: flex; justify-content: space-between; align-items: flex-end; }
+header nav .connect-board ul #menu-item-21 a { display: block; color: #DB9801; }
+header nav .connect-board ul #menu-item-22 { margin-left: 10px; padding: 5px 10px; font-size: 16px; font-weight: bold; border-radius: 8px; text-transform: uppercase; background-color: #DB9801; }
+header nav .connect-board ul #menu-item-22 a { text-decoration: none; color: white; }
+header nav .connect-board ul #menu-item-22 ahover { text-decoration: none; }
 
 #main-section { height: 200vh; width: 100%; }
 #main-section .background { background-color: #fff; float: right; margin-top: 8%; width: 80%; height: 30%; }
 #main-section .image-home img { width: 700px; margin-top: 50px; filter: blur(1.5px); box-shadow: 1px 1px 1px 1px #333; opacity: 0.9; }
 
-.screen-content { background-color: #46604C; background-image: url("assets/img/bg_drugs.jpg"); background-size: cover; background-blend-mode: overlay; background-repeat: no-repeat; }
+.screen-container { width: 70%; margin: auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
- <div class="screen-content">
+
    <?php get_header();
    ?>
 
@@ -7,13 +7,13 @@
   	<div class="background">
 
     </div>
-    
+
     <div class="image-home">
       <img src="<?php echo get_template_directory_uri(); ?>\assets\img\drugs_home.jpg" alt="Médicaments">
     </div>
 
-  </section> 
- </div>
+  </section>
+
 
 
 

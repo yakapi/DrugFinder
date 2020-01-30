@@ -15,10 +15,7 @@ Version: 1.0
 @import 'pages/header.scss';
 @import 'pages/page-home.scss';
 
-.screen-content {
-    background-color: $sixth_color;
-    background-image: url('assets/img/bg_drugs.jpg');
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+.screen-container {
+  width: 70%;
+  margin: auto;
 }
