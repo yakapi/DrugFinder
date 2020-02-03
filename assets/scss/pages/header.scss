@@ -1,72 +1,207 @@
-// First header
-header{
-  height: 150px;
-  background-image: url('assets/img/plant3.svg');
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  nav{
-    display: flex!important;
-    font-family: $third_font;
-    align-items: center;
-    justify-content: space-between;
-    .encard-logo{
-      margin: 10px;
-      width: 100px;
-      height: 100px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    #logo-block{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      &hover{
-        text-decoration: none;
-      }
-      h1 {
-        color: $seven_color;
-        font-family: $second_font;
-        font-size: $size6;
-        text-shadow: 3px 0px 1px black;
-      }
-    }
-    .connect-board{
-      ul{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        #menu-item-21{
-          a{
-            display: block;
-            color: $second_color;
-            // text-decoration: none;
-            &hover{
-              // text-decoration: none;
-            }
-          }
-        }
-        #menu-item-22{
-          margin-left: 10px;
-          padding: 5px 10px;
-          font-size: $size2;
-          font-weight: bold;
-          border-radius: 8px;
-          text-transform: uppercase;
-          background-color: $second_color;
-          a{
-            text-decoration: none;
-            color: white;
-            &hover{
-              text-decoration: none;
-            }
-          }
+// // First header
+// header{
+//   // height: 150px;
+//   // background-image: url('assets/img/plant3.svg');
+//   // background-repeat: no-repeat;
+//   // background-position: bottom center;
+//   nav{
+//     // display: flex!important;
+//     font-family: $third_font;
+//     // align-items: center;
+//     // justify-content: space-between;
+//     .encard-logo{
+//       margin: 10px;
+//       width: 100px;
+//       height: 100px;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
 
+//     hr {
+//       background-color: #333;
+//       margin-top: 20px;
+//     }
+
+//     #logo-block{
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       text-decoration: none;
+//       &hover{
+//         text-decoration: none;
+//       }
+//       h1 {
+//         color: $seven_color;
+//         font-family: $second_font;
+//         font-size: $size6;
+//         text-shadow: 3px 0px 1px black;
+//       }
+//     }
+//     .connect-board{
+//       ul{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: flex-end;
+//         #menu-item-23{
+//           a{
+//             display: block;
+//             color: $second_color;
+//             // text-decoration: none;
+//             &hover{
+//               // text-decoration: none;
+//             }
+//           }
+//         }
+//         #menu-item-24{
+//           margin-left: 10px;
+//           padding: 5px 10px;
+//           font-size: $size2;
+//           font-weight: bold;
+//           border-radius: 8px;
+//           text-transform: uppercase;
+//           background-color: $second_color;
+//           a{
+//             text-decoration: none;
+//             color: white;
+//             &hover{
+//               text-decoration: none;
+//             }
+//           }
+
+//         }
+//       }
+//     }
+//   }
+// }
+
+// Main header
+
+header {
+  hr {
+    background-color: $color6;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    .menu-item {
+      text-transform: uppercase;
+      font-family: $font3;
+      font-size: $size2;
+      a {
+        color: $color6;
+
+      }
+    }
+    #menu-main {
+      display: flex;
+      .current-menu-item {
+        a {
+          color: $color9;
+        }
+      }
+      .menu-item-11, .menu-item-14 {
+        margin-right: 30px;
+      }
+      .menu-item {
+        a {
+          &:hover {
+          text-decoration: none;
+          color: $color9;
+          }
         }
       }
     }
+
+    #menu-logout {
+      display: flex;
+      .menu-item-25 {
+        margin-right: 30px;
+        a {
+          color: $color3;
+          padding: 0 10px;
+          border: 1px solid $color6;
+          border-radius: 2px;
+          background-color: $color6;
+          transition: all .3s;
+          &:hover {
+            color: $color6;
+            text-decoration: none;
+            background-color: $color3;
+          }
+        }
+      }
+      .menu-item-29 {
+        a {
+          &:hover {
+          text-decoration: none;
+          color: $color9;
+        }
+        }
+
+      }
+    }
+    #menu-login {
+      display: flex;
+      .menu-item-23 {
+        margin-right: 30px;
+        a {
+          color: $color3;
+          padding: 0 10px;
+          border: 1px solid $color6;
+          border-radius: 2px;
+          background-color: $color6;
+          transition: all .3s;
+          &:hover {
+            color: $color6;
+            text-decoration: none;
+            background-color: $color3;
+          }
+      }
+    }
+      .menu-item-24 {
+      a {
+        &:hover {
+        text-decoration: none;
+        color: $color9;
+        }
+      }
+
+      }
+    }
+    
+    .navigation-board {
+      display: flex;
+    }
+
+    .encard-logo {
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      h1 {
+        font-family: $font1;
+        text-transform: uppercase;
+        font-size: 28px;
+        color: $color6;
+        font-weight: $medium;
+        margin-left: 20px;
+      }
+
+      img {
+      width: 100px;
+      height: auto;
+      }
+    }
+
   }
 }

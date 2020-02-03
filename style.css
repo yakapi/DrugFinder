@@ -9,7 +9,7 @@ Requires at least: WordPress 5.0
 Version: 1.0
 */
 @import url("https://fonts.googleapis.com/css?family=Caveat:400,700|Montserrat:400,500,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Assistant:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Mukta+Vaani&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Hind+Vadodara&display=swap");
@@ -29,22 +29,64 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 table { border-collapse: collapse; border-spacing: 0; }
 
 @font-face { font-family: 'Harlowsi'; src: url("assets/fonts/HARLOWSI.TTF") format("ttf"), url("assets/fonts/HARLOWSI.woff") format("woff"); }
-header { height: 150px; background-image: url("assets/img/plant3.svg"); background-repeat: no-repeat; background-position: bottom center; }
-header nav { display: flex !important; font-family: "Assistant", sans-serif; align-items: center; justify-content: space-between; }
-header nav .encard-logo { margin: 10px; width: 100px; height: 100px; }
-header nav .encard-logo img { width: 100%; height: 100%; }
-header nav #logo-block { display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; }
-header nav #logo-blockhover { text-decoration: none; }
-header nav #logo-block h1 { color: #FFFB92; font-family: "Caveat", sans-serif; font-size: 56px; text-shadow: 3px 0px 1px black; }
-header nav .connect-board ul { display: flex; justify-content: space-between; align-items: flex-end; }
-header nav .connect-board ul #menu-item-21 a { display: block; color: #DB9801; }
-header nav .connect-board ul #menu-item-22 { margin-left: 10px; padding: 5px 10px; font-size: 16px; font-weight: bold; border-radius: 8px; text-transform: uppercase; background-color: #DB9801; }
-header nav .connect-board ul #menu-item-22 a { text-decoration: none; color: white; }
-header nav .connect-board ul #menu-item-22 ahover { text-decoration: none; }
+header hr { background-color: #46604C; }
+header nav { display: flex; justify-content: space-between; }
+header nav .menu-item { text-transform: uppercase; font-family: "Assistant", sans-serif; font-size: 16px; }
+header nav .menu-item a { color: #46604C; }
+header nav #menu-main { display: flex; }
+header nav #menu-main .current-menu-item a { color: #3B9C61; }
+header nav #menu-main .menu-item-11, header nav #menu-main .menu-item-14 { margin-right: 30px; }
+header nav #menu-main .menu-item a:hover { text-decoration: none; color: #3B9C61; }
+header nav #menu-logout { display: flex; }
+header nav #menu-logout .menu-item-25 { margin-right: 30px; }
+header nav #menu-logout .menu-item-25 a { color: #fff; padding: 0 10px; border: 1px solid #46604C; border-radius: 2px; background-color: #46604C; transition: all .3s; }
+header nav #menu-logout .menu-item-25 a:hover { color: #46604C; text-decoration: none; background-color: #fff; }
+header nav #menu-logout .menu-item-29 a:hover { text-decoration: none; color: #3B9C61; }
+header nav #menu-login { display: flex; }
+header nav #menu-login .menu-item-23 { margin-right: 30px; }
+header nav #menu-login .menu-item-23 a { color: #fff; padding: 0 10px; border: 1px solid #46604C; border-radius: 2px; background-color: #46604C; transition: all .3s; }
+header nav #menu-login .menu-item-23 a:hover { color: #46604C; text-decoration: none; background-color: #fff; }
+header nav #menu-login .menu-item-24 a:hover { text-decoration: none; color: #3B9C61; }
+header nav .navigation-board { display: flex; }
+header nav .encard-logo { text-align: center; display: flex; align-items: center; }
+header nav .encard-logo a:hover { text-decoration: none; }
+header nav .encard-logo h1 { font-family: "Montserrat", sans-serif; text-transform: uppercase; font-size: 28px; color: #46604C; font-weight: 500; margin-left: 20px; }
+header nav .encard-logo img { width: 100px; height: auto; }
 
-#main-section { height: 200vh; width: 100%; }
-#main-section .background { background-color: #fff; float: right; margin-top: 8%; width: 80%; height: 30%; }
-#main-section .image-home img { width: 700px; margin-top: 50px; filter: blur(1.5px); box-shadow: 1px 1px 1px 1px #333; opacity: 0.9; }
+body { background-color: #F3F3F3 !important; }
+
+.hero { text-align: center; margin-top: 50px; position: relative; }
+.hero img { object-fit: cover; width: 100%; height: 400px; }
+.hero .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #182714; }
+.hero .hero-content p:first-child { font-size: 85px; font-family: "Caveat", sans-serif; }
+.hero .hero-content p:last-child { font-family: "Montserrat", sans-serif; font-size: 62px; font-weight: 600; }
+
+.presentation { margin-top: 100px; background-color: #D2D7D3; width: 70%; float: right; }
+.presentation .presentation-title h2 { font-family: "Caveat", sans-serif; font-size: 56px; color: #182714; margin: 20px 0 0 30px; }
+.presentation .presentation-title .divider { width: 150px; height: 4px; background-color: #46604C; margin-left: 40px; }
+.presentation .presentation-content { font-family: "Assistant", sans-serif; margin: 15px 0 0 30px; }
+
+.goal { margin-top: 100px; background-color: #D2D7D3; width: 70%; float: left; }
+.goal .presentation-title h2 { font-family: "Caveat", sans-serif; font-size: 56px; color: #182714; margin: 20px 0 0 30px; }
+.goal .presentation-title .divider { width: 150px; height: 4px; background-color: #46604C; margin-left: 40px; }
+.goal .goal-content { font-family: "Assistant", sans-serif; margin: 15px 0 0 30px; }
+
+.title-contact { font-family: "Assistant", sans-serif; text-transform: uppercase; text-align: center; margin-top: 50px; background-color: #182714; color: #fff; }
+.title-contact h2 { font-size: 20px; padding: 5px 0; }
+
+.contact-block { display: flex; justify-content: space-between; text-align: center; margin-top: 50px; }
+.contact-block .contact-content { width: 100%; }
+.contact-block h3 { font-family: "Caveat", sans-serif; margin-bottom: 20px; }
+.contact-block img { width: 50%; }
+.contact-block form { margin: 0 auto; width: 70%; display: flex; flex-direction: column; font-family: "Assistant", sans-serif; }
+.contact-block form input { margin-bottom: 10px; border-radius: 2px; background: #46604C; border: 1px solid #46604C; color: #fff; }
+.contact-block form input:focus { outline: none; }
+.contact-block form input::placeholder { padding-left: 10px; color: #fff; }
+.contact-block form textarea { resize: none; margin-bottom: 10px; border-radius: 2px; border: 1px solid #46604C; background: #46604C; color: #fff; }
+.contact-block form textarea:focus { outline: none; }
+.contact-block form textarea::placeholder { padding-left: 10px; color: #fff; }
+.contact-block form #submit { width: 20%; background-color: #46604C; border: 1px solid #46604C; color: #fff; transition: all .3s; }
+.contact-block form #submit:hover { background-color: #fff; color: #46604C; }
 
 .screen-container { width: 70%; margin: auto; }
 

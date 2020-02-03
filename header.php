@@ -13,14 +13,14 @@
   <div class="screen-container">
   <!-- Menu header -->
   <header class="header">
+          <hr>
     <nav>
       <!-- Panneau de Navigation -->
       <div class="navigation-board">
-        <div class="encard-logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Logo-DF.svg" alt="Logo">
-        </div>
-        <?php
-
+        
+        <?php  
+        $user_log = is_user_logged_in();
+        
         if ($user_log === true) {
           wp_nav_menu(array(
             'menu' => 'Main',
@@ -28,16 +28,21 @@
         }
 
         ?>
+
       </div>
       <!-- Logo -->
-      <a id="logo-block" href="<?php echo home_url('/'); ?>">
-        <h1>Natural Drugs Finder</h1>
+      <div class="encard-logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Logo-DF.svg" alt="Logo">
+              <a id="logo-block" href="<?php echo home_url('/'); ?>">
+      <h1>Natural Drugs <br>Finder</h1>
       </a>
+    </div>
 
+      
       <!-- Panneau de Connexion/Inscription -->
       <div class="connect-board">
-        <?php $user_log = is_user_logged_in();
-
+        <?php 
+        
         if ($user_log === true) {
           wp_nav_menu(array(
             'menu' => 'Logout',
