@@ -13,8 +13,10 @@ Version: 1.0
 @import 'general/reset.scss';
 @import 'general/fonts.scss';
 @import 'pages/header.scss';
+@import 'pages/footer.scss';
 @import 'pages/page-home.scss';
 @import 'pages/page-contact.scss';
+@import 'pages/page-data.scss';
 
 .screen-container {
   width: 70%;

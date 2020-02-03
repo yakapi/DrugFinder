@@ -1,0 +1,40 @@
+
+
+#ui-id-1{
+    background: #fff;
+    width: 50%;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+
+    #submit-btn {
+        background: $color1;
+        color: $color3;
+        font-family: $font1;
+        border: 1px solid $color1;
+        padding: 5px;
+        transition: all .3s;
+        &:hover {
+            background: $color3;
+            color: $color1;
+        }
+    }
+}
+
+#recherche {
+    width: 80%;
+}
+
+    .search-title {
+    margin-top: 80px;
+        h2 {
+        font-family: $font2;
+        text-align: center;
+    }
+}

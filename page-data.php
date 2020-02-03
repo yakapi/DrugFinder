@@ -2,27 +2,21 @@
 get_header();
 ?>
 
-<div class="form-choice">
-    <div class="MedicU">
-        <div id="MedicUse">Medical Use</div>
-        <form action="">
-            <select name="" id="select-medic-use">
+<?php 
+            global $wpdb;
+            $resultats = $wpdb->get_results("SELECT name, code_cis FROM name_product WHERE name LIKE 'A%'") ;
 
-            </select>
-        </form>
-    </div>
-    <div class="MedicNU">
-        <div id="NoMedicUse">Medical No Use</div>
-        <form action="">
-            <select name="" id="select-no-medic-use">
-                
-            </select>
-        </form>
-
-    </div>
+        ?>
+<div class="search-title">
+    <h2>Find your product</h2>
 </div>
 
-<div id="objectif"></div>
+<form action="" method="post" id="search-form">
+    <input type="text" id="recherche">
+    <input type="hidden" name="url" id="hidden_url" value="<?php echo get_site_url() ?>">
+    <input type="submit" value=" Search product" id="submit-btn">
+
+</form>
 
 
 

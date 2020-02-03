@@ -1,6 +1,9 @@
     <footer>
-      <?php echo 'hello'; ?>
-      <p>It's me Regan !</p>
+      
+    <div class="footer-content">
+      <a href="#">Mentions légales </a> 
+      <p> © 2020 | ACS Belfort</p>
+    </div>
 
     </footer>
   </div>

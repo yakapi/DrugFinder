@@ -1,0 +1,23 @@
+footer {
+    margin-top: 50px;
+    background-color: $color1;
+    color: $color3;
+    margin-top: 70vh;
+
+    .footer-content {
+        padding: 10px 0;
+        text-align: center;
+        a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+            color: $color5;
+        }
+        }
+        p {
+            margin-bottom: 0;
+        }    
+    }
+
+}
