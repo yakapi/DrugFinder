@@ -53,7 +53,7 @@ header nav .encard-logo a:hover { text-decoration: none; }
 header nav .encard-logo h1 { font-family: "Montserrat", sans-serif; text-transform: uppercase; font-size: 28px; color: #46604C; font-weight: 500; margin-left: 20px; }
 header nav .encard-logo img { width: 100px; height: auto; }
 
-footer { margin-top: 50px; background-color: #182714; color: #fff; margin-top: 70vh; }
+footer { margin-top: 50px; background-color: #182714; color: #fff; }
 footer .footer-content { padding: 10px 0; text-align: center; }
 footer .footer-content a { color: inherit; }
 footer .footer-content a:hover { text-decoration: none; color: #D2D7D3; }
@@ -117,6 +117,8 @@ form #submit-btn:hover { background: #fff; color: #182714; }
 
 .search-title { margin-top: 80px; }
 .search-title h2 { font-family: "Caveat", sans-serif; text-align: center; }
+
+.page-data footer { position: fixed; bottom: 0; width: 70%; }
 
 .screen-container { width: 70%; margin: auto; }
 

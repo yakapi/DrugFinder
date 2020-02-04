@@ -142,4 +142,11 @@ function custom_regist(){
 add_shortcode( 'register_form', 'custom_regist' );
 
 
+
+// public function some_function($some_parameter) {
+//   global $wpdb;
+//   $results = $wpdb->get_results( 
+//               $wpdb->prepare("SELECT code_cis FROM name_product WHERE name =", $some_parameter) 
+//            );
+// }
  ?>
