@@ -17,7 +17,20 @@ Version: 1.0
 @import 'pages/page-home.scss';
 @import 'pages/page-contact.scss';
 @import 'pages/page-data.scss';
+@import 'pages/page-inscription.scss';
+@import 'pages/page-connexion.scss';
+@import 'responsive/resp-home.scss';
+@import 'responsive/resp-contact.scss';
+@import 'responsive/resp-data.scss';
+@import 'responsive/resp-connexion.scss';
 
+body{
+  overflow-x: hidden;
+}
+.transi-mobile-menu{
+  top: 0;
+  transition: all .5s ease-in-out;
+}
 .screen-container {
   width: 70%;
   margin: auto;

@@ -1,0 +1,24 @@
+@media (max-width: 576px) { 
+
+
+.page-data{
+    #screen-block {
+        #image-screen-block {
+            #image-screen {
+                height: auto;
+
+                &:before {
+                    font-size: 16px;
+                    top: 82%;
+                    left: 5%;
+                }
+                &:after {
+                    font-size: 24px;
+                    left: 58%;
+                    top: 30%;
+                }
+            }
+        }
+    }
+}
+}

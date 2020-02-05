@@ -2,7 +2,7 @@
     font-family: $font3;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
     background-color: $color1;
     color: $color3;
 
@@ -40,15 +40,15 @@
         input {
             margin-bottom: 10px;
             border-radius: 2px;
-            background: $color6;
-            border: 1px solid $color6;
-            color: $color3;
+            background: $color8;
+            border: 1px solid $color1;
+            color: $color1;
             &:focus {
                 outline:  none;
             }
             &::placeholder {
                 padding-left: 10px;
-                color: $color3;
+                color: $color1;
             }
     
         }
@@ -56,15 +56,15 @@
             resize: none;
             margin-bottom: 10px;
             border-radius: 2px;
-            border: 1px solid $color6;
-            background: $color6;
-            color: $color3;
+            border: 1px solid $color1;
+            background: $color8;
+            color: $color1;
             &:focus {
                 outline:  none;
             }
             &::placeholder {
                 padding-left: 10px;
-                color: $color3;
+                color: $color1;
             }
         }
 

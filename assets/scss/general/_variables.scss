@@ -7,15 +7,15 @@ $size6: 56px;
 $size7: 62px;
 // Main colors
 
-$color1: rgb(24, 39, 20);
-$color2: #DB9801;
+$color1: #3978D3;
+$color2: #000;
 $color3: #fff;
 $color4: #c64a34;
 $color5: #D2D7D3;
-$color6: #46604C;
+$color6: #3978D3;
 $color7: #FFFB92;
 $color8: #F3F3F3;
-$color9: #3B9C61;
+$color9: rgb(42, 70, 109);
 // Nuances
 $degrade1: rgba(255, 255, 255, 0.6);
 $degrade2: rgba(70, 96, 76, 0.8);
@@ -24,3 +24,10 @@ $degrade2: rgba(70, 96, 76, 0.8);
 // Box-shadow
 
 $box-shadow: 10px 5px 5px #DAEAEF;
+
+
+//Personnal Class
+
+.dis-none{
+    display: none;
+}

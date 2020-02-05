@@ -2,6 +2,37 @@
 // Main header
 
 header {
+  .absl-logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .encard-logo {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+    h1 {
+      font-family: $font1;
+      text-transform: uppercase;
+      font-size: 28px;
+      color: $color6;
+      font-weight: $medium;
+      margin-left: 20px;
+    }
+  
+    img {
+    width: 100px;
+    height: auto;
+    }
+  }
   hr {
     background-color: $color6;
   }
@@ -18,7 +49,7 @@ header {
 
       }
     }
-    #menu-main {
+    #menu-main-1 {
       display: flex;
       .current-menu-item {
         a {
@@ -66,7 +97,7 @@ header {
 
       }
     }
-    #menu-login {
+    #menu-login-1 {
       display: flex;
       .menu-item-23 {
         margin-right: 30px;
@@ -94,36 +125,22 @@ header {
 
       }
     }
+
+    #menu-home-logout-1 {
+      .menu-item-45 {
+        a {
+          &:hover {
+          text-decoration: none;
+          color: $color9;
+          }
+        }
+      }
+    }
     
     .navigation-board {
       display: flex;
     }
 
-    .encard-logo {
-      text-align: center;
-      display: flex;
-      align-items: center;
-
-      a {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      h1 {
-        font-family: $font1;
-        text-transform: uppercase;
-        font-size: 28px;
-        color: $color6;
-        font-weight: $medium;
-        margin-left: 20px;
-      }
-
-      img {
-      width: 100px;
-      height: auto;
-      }
-    }
-
+    
   }
 }

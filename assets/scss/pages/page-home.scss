@@ -2,20 +2,12 @@ body {
     background-color: $color8!important;
 }
 
-// Divider entre les sections
-
-.long-divider {
-    width: 100%;
-    height: 2px;
-    background-color: $color1;
-    margin-top: 30px;
-}
 
 // Hero
 
 .hero {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
     position: relative;
     img {
         object-fit: cover;
@@ -27,7 +19,7 @@ body {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    color: $color1;
+    color: $color2;
 
 
     p:first-child {
@@ -46,22 +38,24 @@ body {
 
 .flex-right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
 }
 
 .flex-left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
 }
 
 // Presentation
 
 
 .presentation {
-    margin-top: 70px;
     background-color: $color5;
     width: 70%;
-    // float: right;
     border-radius: 4px;
 
     .presentation-title {
@@ -81,16 +75,17 @@ body {
     .presentation-content {
         font-family: $font3;
         margin: 15px 0 0 30px;
+        p {
+            padding-right: 20px;
+        }
     }
 }
 
 // Goal 
 
 .goal {
-    margin-top: 70px;
     background-color: $color5;
     width: 70%;
-    // float: left;
     border-radius: 4px;
     .presentation-title {
         h2 {
@@ -109,19 +104,22 @@ body {
     .goal-content {
         font-family: $font3;
         margin: 15px 0 0 30px;
+        p {
+            padding-right: 20px;
+        }
     }
 }
 
 // Presentation
 
+.flowers {
+    width: 250px;
+}
 
 .customers {
-    margin-top: 70px;
     background-color: $color5;
     width: 70%;
-    // float: right;
     border-radius: 4px;
-
     .presentation-title {
         h2 {
             font-family: $font2;
@@ -139,5 +137,9 @@ body {
     .customers-content {
         font-family: $font3;
         margin: 15px 0 0 30px;
+        p {
+            padding-right: 20px;
+        }
     }
 }
+

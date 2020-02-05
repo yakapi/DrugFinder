@@ -55,6 +55,7 @@
           wp_enqueue_script( 'script-jquery', get_template_directory_uri() . '/assets/js/jquery-ui.js', array(), '1.0.0', false );
           wp_enqueue_script( 'script-loader', get_template_directory_uri() . '/assets/js/loader.js', array(), '1.0.0', true );
           wp_enqueue_script( 'script-ajax', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0.0', true );
+          wp_enqueue_script( 'script-burger', get_template_directory_uri() . '/assets/js/mobile-burger.js', array(), '1.0.0', true );
           wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/scss/style.css', array(), '1.0' );
       }
       add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
@@ -119,6 +120,7 @@ add_action( 'widgets_init', 'mytheme_sidebar_widgets' );
 
 
 function custom_regist(){
+
   $html = '<form id="c_register_form" class="c_register_form" action="" method="post">
     <div class="row_form">
       <label for="register_name">Identifiant :</label>
@@ -132,8 +134,8 @@ function custom_regist(){
       <label for="register_mail">E-mail :</label>
       <input type="email" id="register_mail" name="mailOf" value="">
     </div>
-    <div class="row_form">
-      <input type="submit" id="register_sub" name="sub" value="Inscription">
+    <div class="c-sub-form row_form">
+      <input type="submit" id="register_sub" class="register-sub" name="sub" value="Inscription">
     </div>
   </form>';
   return $html;

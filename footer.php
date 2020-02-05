@@ -1,16 +1,16 @@
-    <footer>
-      
-    <div class="footer-content">
-      <a href="#">Mentions légales </a> 
-      <p> © 2020 | ACS Belfort</p>
-    </div>
+      </div>
+      <footer>
 
-    </footer>
-  </div>
-    <!-- Appel Script -->
-    <?php
-    wp_footer(); ?>
+        <div class="footer-content">
+          <a href="#">Mentions légales </a>
+          <p> © 2020 | ACS Belfort</p>
+        </div>
 
-</body>
+      </footer>
+      <!-- Appel Script -->
+      <?php
+      wp_footer(); ?>
 
-</html>
+      </body>
+
+      </html>
