@@ -3,7 +3,7 @@
 
 <section id="main-section">
 
-    <div class="hero">
+    <div class="hero reveal-1">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/drugs_home_blue_2.png" alt="">
 
         <div class="hero-content">
@@ -13,10 +13,10 @@
     </div>
 
     <div class="flex-right">
-    <div class="img-left">
+    <div class="img-left reveal-2">
         <img class="flowers" src="<?php echo get_template_directory_uri(); ?>/assets/img/volage.gif" alt="">
         </div>
-        <div class="presentation">
+        <div class="presentation reveal-3">
             <div class="presentation-title">
                 <h2>Notre histoire</h2>
                 <div class="divider"></div>
@@ -29,7 +29,7 @@
     
 
     <div class="flex-left">
-        <div class="goal">
+        <div class="goal reveal-3">
             <div class="presentation-title">
                 <h2>Notre but</h2>
                 <div class="divider"></div>
@@ -38,17 +38,17 @@
                 <p>La base de données Natural Drugs Finder est une base de données en ligne complète et librement accessible contenant des informations sur les médicaments et les cibles de médicaments. En tant que ressource bioinformatique, Natural Drugs Finder combine des données détaillées sur les médicaments (c.-à-d. Chimiques, pharmacologiques et pharmaceutiques) avec des informations complètes sur les cibles des médicaments (c.-à-d. Séquence, structure et voie).</p>
             </div>
         </div>
-        <div class="img-left">
+        <div class="img-left reveal-2">
         <img class="flowers" src="<?php echo get_template_directory_uri(); ?>/assets/img/diagramme.gif" alt="">
         </div>
     </div>
 
 
     <div class="flex-right">
-        <div class="img-left">
+        <div class="img-left reveal-2">
         <img class="flowers" src="<?php echo get_template_directory_uri(); ?>/assets/img/flower.gif" alt="">
         </div>
-        <div class="customers">
+        <div class="customers reveal-3">
             <div class="presentation-title">
                 <h2>Pour qui ?</h2>
                 <div class="divider"></div>
