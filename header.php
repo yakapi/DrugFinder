@@ -22,7 +22,8 @@
           <!-- Panneau de Connexion/Inscription -->
           <div class="connect-board">
             <?php 
-            
+            $user_log = is_user_logged_in();
+
             if ($user_log === true) {
               wp_nav_menu(array(
                 'menu' => 'Logout',
@@ -39,7 +40,6 @@
             <div class="navigation-board-mobile">
             
             <?php  
-            $user_log = is_user_logged_in();
             
             if ($user_log === true) {
               wp_nav_menu(array(

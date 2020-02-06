@@ -19,6 +19,16 @@
                 }
             }
         }
+
+        #product-screen {
+            flex-wrap: nowrap;
+            flex-direction: column-reverse;
+            height: auto;
+        }
     }
+}
+
+.footer-mobile {
+    margin-top: 180px;
 }
 }

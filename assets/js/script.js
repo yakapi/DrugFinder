@@ -25,7 +25,6 @@ let screen_block = document.getElementById('screen-block');
 let product_screen = document.getElementById('product-screen');
 let isRemplit = false;
 
-console.log(product_screen);
 
 let titre_champ = ['Code', 'Produit', 'Forme', 'Voie', 'Commercialisation', 'Laboratoire', 'Composition', 'Ingrédient', 'Dosage', 'Unité', 'Délivrance', 'Générique', 'Présentation'];
 

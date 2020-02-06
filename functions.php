@@ -128,7 +128,7 @@ function custom_regist(){
     </div>
     <div class="row_form">
       <label for="register_password">Mot de Passe :</label>
-      <input type="text" id="register_password" name="pswd" value="">
+      <input type="password" id="register_password" name="pswd" value="">
     </div>
     <div class="row_form">
       <label for="register_mail">E-mail :</label>
@@ -144,6 +144,24 @@ function custom_regist(){
 add_shortcode( 'register_form', 'custom_regist' );
 
 
+// Redirection page data
+function wpm_ressource_redirect(){
+  if( is_page( 'data' ) && ! is_user_logged_in() ){
+      wp_redirect( home_url( '/connexion/' ) );
+      exit;
+  }
+}
+add_action( 'template_redirect', 'wpm_ressource_redirect' );
+
+
+// Affichage de la barre admin
+function remove_admin_bar() {
+  if (!current_user_can('administrator') && !is_admin()) {
+    show_admin_bar(false);
+  }
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
 
 // public function some_function($some_parameter) {
 //   global $wpdb;
