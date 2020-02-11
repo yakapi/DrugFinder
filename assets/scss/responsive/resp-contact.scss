@@ -1,0 +1,17 @@
+@media (max-width: 576px) { 
+
+.contact-block {
+    flex-direction: column-reverse;
+
+    img {
+        width: 100%;;
+    }
+
+    .contact-content {
+        form {
+            width: 100%;
+        }
+    }
+}
+
+}

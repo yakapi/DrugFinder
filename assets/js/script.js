@@ -1,160 +1,149 @@
 
-
-// fetch('https://health-products.canada.ca/api/natural-licences/MedicinalIngredient/?lang=fr&type=json', {
-//   cache: "force-cache"
-// })
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((myJsonMedicinal) => {
-//     // console.log(myJson);
-//     // for (let i = 0; i < myJson.length; i++) {
-//     //   var para_data = document.createElement('option');
-//     //   para_data.innerHTML = myJson[i].product_name;
-//     //   medicine_select.appendChild(para_data);
-//     // }
-
-//   });
-
-// var global_name_product = [];
-// var product_id = [];
-var ingredient_name = [];
-var new_array = [];
-var medic_use_btn = document.getElementById('MedicUse');
-var noMedic_use_btn = document.getElementById('NoMedicUse');
-var page = 0;
+const siteurl = document.querySelector("#hidden_url");
 
 
-let medicine_select = document.getElementById('select-medic-use');
-let no_medicine_select = document.getElementById('select-no-medic-use');
 
-
-for (let i = 0; i < 5847; i++) {
-  page++;  
-  
-  
-  fetch('https://health-products.canada.ca/api/natural-licences/MedicinalIngredient/?page=' + page, {
-    cache: "force-cache"
-  })
-  .then((response) => {
-    return response.json();
-  })
-  .then((myJsonIngredient) => {
-      
-      for (let i = 0; i < 100; i++) {
-        var name_ingredient = myJsonIngredient.data[i].ingredient_name;
-        ingredient_name[i] = name_ingredient;
-        
-      }
-      // let n = 0;
-      
-      for (let i = 0; i < ingredient_name.length; i++) {
-        let boolean = false;
-        
-        for (let j = 0; j < i ; j++) {
-          if (ingredient_name[j] == ingredient_name[i]) {
-            boolean = true;
-          }
-        }
-        if (boolean == false) {
-          new_array.push(ingredient_name[i]);
-          // new_array[n] = ingredient_name[i];
-          // n++;
-        }
-        // console.log(new_array[0]);
-      }
-    })
-    .then(() => {
-      console.log(new_array.length);
-      
-      for (let i = 0; i < new_array.length; i++) {
-        var para_data = document.createElement('option');
-        para_data.innerHTML = new_array[i];
-        medicine_select.appendChild(para_data);      
-      }
-    })
-  }
-    
-    console.log(new_array);
-    
-    
-    
-    fetch('https://health-products.canada.ca/api/natural-licences/NonMedicinalIngredient/?lang=en&type=json', {
-      cache: "force-cache"
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((myJsonIngredient) => {
-      // for (let i = 0; i < myJsonIngredient.length; i++) {
-      //   var para_data = document.createElement('option');
-      //   para_data.innerHTML = myJsonIngredient[i].ingredient_name;
-      //   no_medicine_select.appendChild(para_data);
-      // }
-    });
-
-    
-medic_use_btn.addEventListener('click', () => {
-  console.log('hello');
-  
-
-
-});
-noMedic_use_btn.addEventListener('click', () => {
-  console.log('hello');
-
-
+$('#recherche').autocomplete({
+    source: function (requete, reponse) {
+        $.ajax({
+            url: siteurl.value + '/searchbar/',
+            dataType: 'json',
+            data: {
+                start: $('#recherche').val(), // on donne la chaîne de caractère tapée dans le champ de recherche
+                max: 15
+            },
+            success: function (donnee) {
+                reponse($.map(donnee, function (objet) {
+                    return objet;
+                }));
+            }
+        });
+    }
 });
 
-// fetch('https://health-products.canada.ca/api/natural-licences/ProductLicence/?lang=fr&type=json', {
-//   cache: "force-cache"
-// })
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((myJsonName) => {
-//     for (let i = 0; i < myJsonName.length; i++) {
-//       var name_prod = myJsonName[i].product_name;
-//       var id_prod = myJsonName[i].lnhpd_id;
-//       product_name[i] = name_prod;
-//       product_id[i] = id_prod;
-//     }
-//     global_name_product.push(product_name, product_id);
-//     // console.log(global_name_product);
-//   });
+let screen_block = document.getElementById('screen-block');
+let product_screen = document.getElementById('product-screen');
+let isRemplit = false;
 
 
-// var objectif = document.getElementById('objectif');
-// var page = 0;
-// var id = 5522478;
-// var purpose = "N/A";
+let titre_champ = ['Code', 'Produit', 'Forme', 'Voie', 'Commercialisation', 'Laboratoire', 'Composition', 'Ingrédient', 'Dosage', 'Unité', 'Délivrance', 'Générique', 'Présentation'];
+
+let statusLoad = false;
+
+$('#search-form').submit(function (e) {
+    e.preventDefault();
+    let image_screen = document.getElementById('image-screen-block');
+    let product_screen_blk = document.getElementById('product-screen-block');
+    image_screen.classList.add('dis-none');
+    let loader_content = document.getElementById('loader');
+    loader_content.classList.remove('dis-none');    
+        product_screen_blk.classList.remove('dis-none');
+        if (isRemplit == true) {
+
+            new Promise(function (resolve, reject) {
+                product_screen = document.getElementById('product-screen');
+                resolve(product_screen.remove());
+            }).then(function () {
+                loader_content.classList.remove('dis-none');
+
+                let product_screen = document.createElement('div');
+                product_screen.setAttribute('id', 'product-screen');
+                screen_block.appendChild(product_screen);
+                return product_screen;
+            }).then(function (product_screen) {
 
 
-// for (let i = 0; i < 1071; i++) {
-//   page++;
+                let postdata = $('#search-form').serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: siteurl.value + '/produit',
+                    data: postdata,
+                    dataType: 'json',
+                    success: function (result) {
+                        for (let i = 0; i < result.length; i++) {
+                            let parent_para = document.createElement('div');
+                            parent_para.setAttribute('id', "parent" + i);
+                            parent_para.classList.add('block-content');
+                            let title_para = document.createElement('h3');
+                            let paragraphe = document.createElement('p');
+                            title_para.innerHTML = titre_champ[i];
+                            paragraphe.innerHTML = result[i]; 
+                            parent_para.appendChild(title_para); 
+                            parent_para.appendChild(paragraphe); 
+                            product_screen.appendChild(parent_para); 
 
-//   fetch('https://health-products.canada.ca/api/natural-licences/ProductPurpose/?page=' + page, {
+                        }
 
-//     cache: "force-cache"
-//   })
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((myJson) => {
+                    }
 
-//       for (let i = 0; i < myJson.data.length; i++) {
-//         if(myJson.data[i].purpose == purpose) {
-//         var para_data = document.createElement('p');
-//         para_data.innerHTML = myJson.data[i].lnhpd_id;
-//         objectif.appendChild(para_data);
+                }).then(function(){                 
+                   statusLoad = true;
+                   if (statusLoad === true) {
+                    loader_content.classList.add('dis-none');            
+                   }     
+                });  
 
-//         console.log(myJson.data[i].lnhpd_id);
+            })
+        }
+        if (isRemplit == false) {
+            isRemplit = true;
+            let postdata = $('#search-form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: siteurl.value + '/produit',
+                data: postdata,
+                dataType: 'json',
+                success: function (result) {
+                    for (let i = 0; i < result.length; i++) {
+                        let parent_para = document.createElement('div');
+                        parent_para.setAttribute('id', "parent" + i);
+                        parent_para.classList.add('block-content');
+                        let title_para = document.createElement('h3');
+                        let paragraphe = document.createElement('p');
+                        title_para.innerHTML = titre_champ[i];
+                        paragraphe.innerHTML = result[i];
+                        parent_para.appendChild(title_para);
+                        parent_para.appendChild(paragraphe);
+                        product_screen.appendChild(parent_para);
 
-//         }
+                    }
+                    
 
-//       }
+                }
 
-//     });
+            }).then(function(){
+                statusLoad = true;
+                if (statusLoad === true) {
+                 loader_content.classList.add('dis-none');            
+                }      
+            })
 
-// }
+        }
 
+
+})
+
+
+// Apparition au défilement
+
+const ratio = .1;
+
+const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: ratio
+}
+
+const handleIntersect = function(entries, observer) {
+    entries.forEach(function (entry) {
+        if(entry.intersectionRatio > ratio) {
+            entry.target.classList.add('reveal-visible');
+            observer.unobserve(entry.target);
+        }
+    })
+}
+
+const observer = new IntersectionObserver(handleIntersect, options);
+document.querySelectorAll('[class*="reveal-"]').forEach(function(r) {
+    observer.observe(r);
+})

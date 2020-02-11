@@ -11,9 +11,29 @@
   <?php
     wp_body_open();
     get_header();
+
+    ?>
+    <div class="login-form-block">
+
+    <?php 
     wp_login_form();
-    get_footer();
-    wp_footer();
+?>
+      <div class="gif-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/login-gif.gif" alt="">
+      </div>
+</div>
+</div>
+
+<footer class="c-footer-register">
+
+  <div class="footer-content">
+    <a href="#">Mentions légales </a>
+    <p> © 2020 | ACS Belfort</p>
+  </div>
+
+</footer>
+<?php
+        wp_footer();
   ?>
 </body>
 </html>
